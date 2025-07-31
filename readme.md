@@ -1,4 +1,8 @@
-# Passos para Instalar e Configurar CUDA para Treinamento com PyTorch
+# Treinamento de Modelo LLM com Hugging Face
+
+Este projeto realiza o treinamento de um modelo de linguagem (LLM) utilizando a biblioteca Hugging Face Transformers. O objetivo é ajustar um modelo pré-treinado (como o DistilGPT2) com dados personalizados, utilizando PyTorch e CUDA para aceleração via GPU. O repositório inclui scripts para preparação dos dados, treinamento e instruções para configuração do ambiente.
+
+## Passos para Instalar e Configurar CUDA para Treinamento com PyTorch
 
 1. **Instalar o driver NVIDIA compatível**
    - Baixe e instale o driver mais recente para sua GPU NVIDIA.
@@ -50,4 +54,4 @@
 
 8. **Reinicie o terminal ou ambiente virtual após as instalações.**
 
-Pronto! Seu ambiente estará preparado para treinar modelos na GPU usando
+Pronto! Seu ambiente estará preparado para treinar modelos na GPU usando PyTorch.

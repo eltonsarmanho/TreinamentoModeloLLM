@@ -1,0 +1,5 @@
+transformers
+datasets
+torch
+
+# Observação: Caso não possua GPU, o treinamento será realizado na CPU, podendo ser mais lento.
