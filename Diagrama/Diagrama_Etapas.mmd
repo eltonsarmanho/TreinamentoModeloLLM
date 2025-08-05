@@ -1,0 +1,41 @@
+flowchart TD
+    A["Preparação do Ambiente"] == Etapa 1 ==> B["Preparação dos Dados"]
+    B == Etapa 2 ==> C["Construção e Treinamento do Modelo"]
+    C == Etapa 3 ==> D["Inferência"]
+    C1["Converter para Dataset"] -.-> C2["Carregar modelo/tokenizer"]
+    C2 -.-> C3["Tokenizar dados"]
+    C3 -.-> C4["Configurar treinamento"]
+    C4 -.-> C5["Inicializar Trainer"]
+    C5 -.-> C6["Treinar e salvar modelo"]
+    B -.-> B1["Carregar JSON"]
+    B1 -.-> B2["Formatar exemplos"]
+    C -.-> C1
+    D -.-> D1["Carregar modelo ajustado"]
+    D1 -.-> D2["Criar pipeline"]
+    D2 -.-> D3["Gerar resposta"]
+
+     A:::highlighted
+     B:::highlighted
+     C:::highlighted
+     D:::highlighted
+     C1:::lightGreen
+     C2:::lightGreen
+     C3:::lightGreen
+     C4:::lightGreen
+     C5:::lightGreen
+     C6:::lightGreen
+     B1:::lightGray
+     B2:::lightGray
+     D1:::lightBlue
+     D2:::lightBlue
+     D3:::lightBlue
+    classDef lightGray fill:#d3d3d3,stroke:#000,stroke-width:1px
+    classDef highlighted stroke:#f00,stroke-width:2px
+    classDef lightBlue fill:#add8e6,stroke:#000,stroke-width:1px
+    classDef lightGreen fill:#90ee90,stroke:#000,stroke-width:1px
+    style A fill:#fff,stroke:#000,stroke-width:1px
+    style B fill:#fff,stroke:#000,stroke-width:1px
+    style C fill:#fff,stroke:#000,stroke-width:1px
+    style D fill:#fff,stroke:#000,stroke-width:1px
+
+
